@@ -1,0 +1,12 @@
+# The big parts live in the release zip (nvim-portable.zip), not in git:
+/nvim/
+/w64devkit/
+/clangd/
+/codelldb/
+/fonts/
+/data/
+/state/
+/cache/
+/tools/*.exe
+/tools/licenses/
+*.zip

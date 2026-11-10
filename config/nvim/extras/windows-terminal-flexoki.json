@@ -1,0 +1,65 @@
+{
+  "//": "Flexoki for Windows Terminal: the same colours as Neovim's :terminal (lua/flexoki). Add the two schemes to \"schemes\" and the two themes to \"themes\" in settings.json, then set the Ubuntu / Neovim profile's \"colorScheme\" to \"Flexoki Dark\" (or Light) and \"theme\" to \"Flexoki Dark\". Neovim already sets the terminal background itself while it runs (OSC 11), so this mainly makes the shell, lazygit and the tab bar match.",
+  "schemes": [
+    {
+      "name": "Flexoki Dark",
+      "background": "#100F0F",
+      "foreground": "#CECDC3",
+      "cursorColor": "#FFFCF0",
+      "selectionBackground": "#343331",
+      "black": "#343331",
+      "red": "#D14D41",
+      "green": "#879A39",
+      "yellow": "#D0A215",
+      "blue": "#4385BE",
+      "purple": "#CE5D97",
+      "cyan": "#3AA99F",
+      "white": "#878580",
+      "brightBlack": "#575653",
+      "brightRed": "#E8705F",
+      "brightGreen": "#A0AF54",
+      "brightYellow": "#DFB431",
+      "brightBlue": "#66A0C8",
+      "brightPurple": "#E47DA8",
+      "brightCyan": "#5ABDAC",
+      "brightWhite": "#CECDC3"
+    },
+    {
+      "name": "Flexoki Light",
+      "background": "#FFFCF0",
+      "foreground": "#100F0F",
+      "cursorColor": "#100F0F",
+      "selectionBackground": "#DAD8CE",
+      "black": "#100F0F",
+      "red": "#AF3029",
+      "green": "#66800B",
+      "yellow": "#AD8301",
+      "blue": "#205EA6",
+      "purple": "#A02F6F",
+      "cyan": "#24837B",
+      "white": "#CECDC3",
+      "brightBlack": "#6F6E69",
+      "brightRed": "#D14D41",
+      "brightGreen": "#879A39",
+      "brightYellow": "#D0A215",
+      "brightBlue": "#4385BE",
+      "brightPurple": "#CE5D97",
+      "brightCyan": "#3AA99F",
+      "brightWhite": "#F2F0E5"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Flexoki Dark",
+      "tab": { "background": "#100F0FFF", "unfocusedBackground": "#1C1B1AFF", "showCloseButton": "hover" },
+      "tabRow": { "background": "#1C1B1AFF", "unfocusedBackground": "#1C1B1AFF" },
+      "window": { "applicationTheme": "dark" }
+    },
+    {
+      "name": "Flexoki Light",
+      "tab": { "background": "#FFFCF0FF", "unfocusedBackground": "#F2F0E5FF", "showCloseButton": "hover" },
+      "tabRow": { "background": "#F2F0E5FF", "unfocusedBackground": "#F2F0E5FF" },
+      "window": { "applicationTheme": "light" }
+    }
+  ]
+}

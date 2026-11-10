@@ -1,0 +1,46 @@
+# nvim-portable: clangd defaults for every project (setup-terminal.cmd copies this file to %LOCALAPPDATA%/clangd/config.yaml).
+# A project can refine these with its own .clangd / .clang-tidy file.
+# Flags for files without compile_commands.json are set in config/nvim/lua/config/lsp.lua
+# (fallbackFlags), so they never override a real project's flags.
+
+Index:
+  Background: Build          # index the whole project in the background
+  StandardLibrary: Yes       # std:: symbols complete even before they're #included
+
+Diagnostics:
+  UnusedIncludes: Strict     # greys out #includes nothing uses (quick fix removes them)
+  MissingIncludes: None      # `Strict` would warn for every transitively-included symbol
+  ClangTidy:
+    Add:
+      - bugprone-*
+      - performance-*
+      - modernize-use-nullptr
+      - modernize-use-override
+      - modernize-use-emplace
+      - modernize-loop-convert
+      - modernize-make-unique
+      - modernize-make-shared
+      - modernize-use-using
+      - readability-misleading-indentation
+      - readability-redundant-*
+      - misc-redundant-expression
+      - misc-unused-using-decls
+      - cppcoreguidelines-slicing
+      - cppcoreguidelines-virtual-class-destructor
+    Remove:
+      - bugprone-easily-swappable-parameters
+      - bugprone-narrowing-conversions
+      - bugprone-exception-escape
+
+Completion:
+  AllScopes: Yes             # complete symbols from namespaces not yet `using`ed
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  Designators: Yes
+  BlockEnd: No
+
+Hover:
+  ShowAKA: Yes               # show the underlying type of aliases
